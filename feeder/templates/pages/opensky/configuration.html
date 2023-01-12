@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="../../css/configpage.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/opensky-configpage.css') }}">
         <title>Flightradar24 Configuration</title>
     </head>
 <body>
@@ -11,11 +11,11 @@
     
     <main>
         <form action="" class="form" title="Flightradar24 Configuration">
-            <div class="sharing-key-container"> 
-                <label for="sharing-key">Sharing key</label>
-                <input type="text" id="sharing-key" name="sharing-key" required>
-                <input type="button" class="button" name="updateButton" value="Update">
-            </div> 
+            
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
             
             <div>
                 <label for="latitude">Latitude</label>
@@ -32,14 +32,9 @@
                 <input type="text" id="altitude-ft" name="altitude-ft" required>
             </div>
             
-            <div>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <input type="submit" value="Signup" class="button">
-            </div>
-
-            <div class="bottom-text">
-                To update the receiver location either signup again or send email to  support@fr24.com or visit your account at <a href="https://www.flightradar24.com/account/data-sharing">https://www.flightradar24.com/account/data-sharing</a> 
+            <div class="buttons">
+                <input type="button" name="update-location-button" id="update-location-button" value="Update location">
+                <input type="submit" name="request-new-serial-button" id="request-new-serial-button" value="Request new Serial">
             </div>
 
         </form>

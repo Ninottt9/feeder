@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/styles.css">
+        <!-- <link rel="stylesheet" href="../css/styles.css"> -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
         <script src="./js/index.js"></script>
         <title>Feeder</title>
     </head>
@@ -25,7 +26,7 @@
                     <div><span>Radar ID:</span> <span>sndjlkg;j</span> </div>
                     <div class="status-config-buttons">
                         <a href="pages/flightradar24/status.html">Status</a>
-                        <a href="pages/flightradar24/configuration.html">Configuration</a>
+                        <a href="{{ url_for('flightradar_configuration') }}">Configuration</a>
                     </div>
                 </div>
 
@@ -41,7 +42,7 @@
                     <div><span>Feeder ID:</span> <span>slgj;lkjdsg;j;ldsj</span></div>
                     <div class="status-config-buttons">
                         <a href="pages\flightaware\configuration.html">Status</a>
-                        <a href="pages\flightaware\configuration.html">Configuration</a>
+                        <a href="{{ url_for('flightaware_configuration') }}">Configuration</a>
                     </div>
                 </div>
 
@@ -58,7 +59,7 @@
                     <div><span>Username:</span> <span>username</span> </div>
                     <div class="status-config-buttons">
                         <a href="pages/opensky/status.html">Status</a>
-                        <a href="pages/opensky/configuration.html">Configuration</a>
+                        <a href="{{ url_for('opensky_configuration') }}">Configuration</a>
                     </div>
                 </div>
 
