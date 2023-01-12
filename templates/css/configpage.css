@@ -1,0 +1,46 @@
+@import "ui.css";
+
+.form {
+    /* display: flex; */
+    /* flex-direction: column; */
+
+    margin: 50px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: darkblue;
+    padding: 20px;
+
+    /* width: 500px; */
+}
+
+.button {
+    background-color: grey;
+    border-radius: 10%;
+    border-color: black;
+}
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 200px;
+    text-align: left;
+}
+input {
+    /* width: 100%; */
+  display: inline-block;
+  /* float: right; */
+}
+
+.sharing-key-container {
+    margin-bottom: 50px;
+}
+
+.bottom-text {
+    position: relative;
+    margin-top: 20px;
+    /* margin-left: 40px; */
+    /* margin-right: 40px; */
+
+    font-size: smaller;
+}

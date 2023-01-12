@@ -1,0 +1,132 @@
+/* color theme */
+:root {
+    /* light ui theme */
+    --bcgColor: #ffffff;
+    --alternateBcgColor: #eaeaea;
+    --hoverBcgColor: #bbbbbb;
+    --textColor: #000000;
+    --buttonTop: rgba(255, 255, 255, 1);
+    --buttonBottom: rgba(245, 245, 245, 1);
+    --selectionBcg: #2b94e5;
+    --selectionText: #ffffff;
+    --outline: #aaaaaa;
+    --transBackground: #ddddddaa;
+}
+
+/* main elements (not reusable) */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    overflow: hidden;
+    color: var(--textColor);
+    position: fixed;
+    height: 100vh;
+}
+
+/* reusable elements*/
+button {
+    padding: 5px;
+    min-width: 100px;
+    margin: 4px;
+    background: linear-gradient(180deg, var(--buttonTop) 0%, var(--buttonBottom) 100%);
+    border: 0;
+    border-radius: 2px;
+    color: var(--textColor);
+    /*box-shadow: 0 0 0.15em #444444;*/
+    transition: background-color 500ms, outline 500ms, box-shadow 500ms;
+    outline: solid 1px var(--outline);
+}
+
+button:hover,
+button:focus {
+    transition: background-color 200ms, outline 200ms, box-shadow 200ms;
+    box-shadow: 0 0 0.2em #000000;
+    outline: solid 1px var(--selectionBcg);
+}
+
+button:active {
+    background: var(--outline);
+    transition: background-color 50ms, outline 200ms;
+    outline: solid 1px var(--selectionBcg);
+}
+
+button.selected {
+    background: var(--outline);
+    transition: background-color 50ms, outline 200ms;
+    outline: solid 1px var(--outline);
+}
+
+.small_button {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    min-width: 0px;
+}
+
+.floating-panel {
+    position: fixed;
+    box-shadow: 0 0 0.7em #000000;
+    background-color: var(--bcgColor);
+    border-radius: 5px;
+    z-index: 8;
+}
+
+.plugin_config {
+    margin: 5px;
+    margin-left: 20px;
+    text-align: right;
+}
+
+select {
+    margin: 4px;
+    background: linear-gradient(180deg, var(--buttonTop) 0%, var(--buttonBottom) 100%);
+    outline: solid 1px var(--outline);
+    border: 0;
+    border-radius: 2px;
+    color: var(--textColor);
+}
+
+select:hover {
+    outline: solid 1px var(--selectionBcg);
+    transition: outline 200ms;
+}
+
+select:focus {
+    box-shadow: 0 0 0.2em #000000;
+    outline: solid 1px var(--selectionBcg);
+    transition: outline 200ms;
+}
+
+select option {
+    background: var(--bcgColor);
+}
+
+input[type=text] {
+    padding: 5px;
+    margin: 4px;
+    margin-left: 10px;
+    margin-right: 30px;
+    background-color: var(--bcgColor);
+    border: 0;
+    border-radius: 2px;
+    transition: outline 200ms;
+    outline: solid 1px var(--outline);
+    color: var(--textColor);
+}
+
+input[type=text]:hover {
+    outline: solid 1px var(--selectionBcg);
+    transition: outline 200ms;
+}
+
+input[type=text]:focus {
+    box-shadow: 0 0 0.2em #000000;
+    outline: solid 1px var(--selectionBcg);
+}
+
+input[type=text].textfield-small {
+    padding: 1px;
+    margin: 4px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
