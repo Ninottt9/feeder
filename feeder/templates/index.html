@@ -3,7 +3,8 @@
     <head>
         <!-- <link rel="stylesheet" href="../css/styles.css"> -->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-        <script src="./js/index.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ url_for('static', filename='index.js') }}"></script> -->
         <title>Feeder</title>
     </head>
     <body>
@@ -22,7 +23,7 @@
                       </label></span></div>
                     
                     <div><span>Running</span> <span class="running-status-dot" id="running-status-dot-Flightradar"></span> </div>
-                    <div><span>Sharing key:</span> <span>slgj;lkjdsg;j;ldsj</span></div>
+                    <div><span>Sharing key:</span> <span>{{sharing_key}}</span></div>
                     <div><span>Radar ID:</span> <span>sndjlkg;j</span> </div>
                     <div class="status-config-buttons">
                         <a href="pages/flightradar24/status.html">Status</a>
@@ -39,7 +40,7 @@
                       </label></span></div>
                     
                     <div><span>Running</span> <span class="running-status-dot" id="running-status-dot-Feeder"></span> </div>
-                    <div><span>Feeder ID:</span> <span>slgj;lkjdsg;j;ldsj</span></div>
+                    <div><span>Feeder ID:</span> <span>{{feeder_id}}</span></div>
                     <div class="status-config-buttons">
                         <a href="pages\flightaware\configuration.html">Status</a>
                         <a href="{{ url_for('flightaware_configuration') }}">Configuration</a>
@@ -55,8 +56,8 @@
                       </label></span></div>
                     
                     <div><span>Running</span> <span class="running-status-dot" id="running-status-dot-Flightradar"></span> </div>
-                    <div><span>Serial:</span> <span>28439656</span></div>
-                    <div><span>Username:</span> <span>username</span> </div>
+                    <div><span>Serial:</span> <span>{{serial}}</span></div>
+                    <div><span>Username:</span> <span>{{username}}</span> </div>
                     <div class="status-config-buttons">
                         <a href="pages/opensky/status.html">Status</a>
                         <a href="{{ url_for('opensky_configuration') }}">Configuration</a>
@@ -72,11 +73,11 @@
                       </label></span></div>
                     
                     <div><span>Running</span> <span class="running-status-dot" id="running-status-dot-Flightradar"></span> </div>
-                    <div><span>User:</span> <span>username</span></div>
-                    <div><span>UUID:</span> <span>jsaldjghlkfshksfjlfdsj;lk;j</span> </div>
+                    <div><span>User:</span> <span>{{user}}</span></div>
+                    <div><span>UUID:</span> <span>{{uuid}}</span> </div>
                     <div class="status-config-buttons">
                         <a href="pages/ads-b/status.html">Status</a>
-                        <a href="pages/ads-b/configuration.html">Configuration</a>
+                        <a href="{{ url_for('adsb_configuration') }}">Configuration</a>
                     </div>
                 </div>
 
@@ -89,7 +90,7 @@
                       </label></span></div>
                     
                     <div><span>Running</span> <span class="running-status-dot" id="running-status-dot-Flightradar"></span> </div>
-                    <div><span>Sharecode:</span> <span>4326654564365</span></div>
+                    <div><span>Sharecode:</span> <span>{{share_code}}</span></div>
                     <div class="status-config-buttons">
                         <a href="pages/planefinder/status.html">Status</a>
                         <a href="pages/planefinder/configuration.html">Configuration</a>
